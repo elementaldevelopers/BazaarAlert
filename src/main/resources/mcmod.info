@@ -1,0 +1,16 @@
+[
+{
+  "modid": "bazaaralert",
+  "name": "Bazaar Alert",
+  "description": "Notifies you with a sound when buy orders are filled!",
+  "version": "1.0.0",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["RedKaneChironic"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
