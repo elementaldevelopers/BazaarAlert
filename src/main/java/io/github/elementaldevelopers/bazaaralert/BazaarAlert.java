@@ -35,10 +35,5 @@ public class BazaarAlert {
     @SubscribeEvent
     public void ChatRecieved(ClientChatReceivedEvent event) {
     	if (!sc.isEnabled) return;
-        String message = event.message.getUnformattedText();
-    	Matcher m = regex.matcher(message);
-    	if (m.matches()) {
-    	    Minecraft.getMinecraft().getSoundHandler().playSound(PositionedSoundRecord.create(new ResourceLocation(this.MODID, "sound"), 1.0F));
-    	}
-    }  
+    }
 }
