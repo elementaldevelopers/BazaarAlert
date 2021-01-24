@@ -46,6 +46,7 @@ public class SettingsCommand extends CommandBase{
 			Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("This mod notifies you when your Bazaar orders are filled"));
 			Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("However, it only works when Skyblock sends the Bazaar filled message"));
 			Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("Use /bazaaralert [setting] to turn it on or off. Accepted values are on, off, true, or false."));
+			return;
 		}
 		if (args.length > 1) {
 			Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(getCommandUsage(sender)));

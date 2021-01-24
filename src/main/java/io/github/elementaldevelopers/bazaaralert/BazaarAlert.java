@@ -24,7 +24,7 @@ import java.util.regex.Pattern;
 @Mod(modid = BazaarAlert.MODID, version = BazaarAlert.VERSION)
 public class BazaarAlert {
     public static final String MODID = "BazaarAlert";
-    public static final String VERSION = "1.0.0";
+    public static final String VERSION = "1.1.0";
     public static Pattern regex = Pattern.compile("^\\[Bazaar\\] Your (Sell|Buy) (Offer|Order) for \\d+x (\\w|\\s)+ was filled!$");
     SettingsCommand sc = new SettingsCommand();
     @EventHandler
@@ -35,5 +35,10 @@ public class BazaarAlert {
     @SubscribeEvent
     public void ChatRecieved(ClientChatReceivedEvent event) {
     	if (!sc.isEnabled) return;
+    	String message = event.message.getUnformattedText();
+    	Matcher m = regex.matcher(message);
+    	if (m.matches()) {
+    	    Minecraft.getMinecraft().getSoundHandler().playSound(PositionedSoundRecord.create(new ResourceLocation(this.MODID, "sound"), 1.0F));
+    	}
     }
 }
