@@ -8,12 +8,7 @@ on:
     branches:
       - '**'
   pull_request:
-  workflow_dispatch:
-    inputs:
-      upload_artifact:
-        description: 'Upload artifact to this run? [yes | no]'
-        required: false
-        default: 'no'
+
 jobs:
   build:
     name: Build
